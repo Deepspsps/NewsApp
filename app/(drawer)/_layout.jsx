@@ -2,7 +2,9 @@ import React from 'react';
 import { Drawer } from "expo-router/drawer";
 import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
 import Entypo from '@expo/vector-icons/Entypo';
-import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import AntDesign from '@expo/vector-icons/AntDesign';
+import Feather from '@expo/vector-icons/Feather';
 import { useRouter } from "expo-router";
 
 const CustomDrawerContent = (props) => {
@@ -11,7 +13,7 @@ const CustomDrawerContent = (props) => {
     <DrawerContentScrollView {...props}>
       <DrawerItem 
         icon={({ color, size }) =>
-          <Entypo name="list" size={size} color={color} />
+          <Feather name="smartphone" size={size} color={color} />
         }
         label={"Technology"}
         onPress={() => {
@@ -20,11 +22,31 @@ const CustomDrawerContent = (props) => {
       />
       <DrawerItem
         icon={({ color, size }) =>
-          <FontAwesome6 name="contact-book" size={size} color={color} />
+        <MaterialIcons name="business-center" size={size} color={color} />
         }
         label={"Business"}
         onPress={() => {
           router.push('/(drawer)/business');
+        }}
+      />
+
+      <DrawerItem
+        icon={({ color, size }) =>
+          <Entypo name="area-graph" size={size} color={color} />
+        }
+        label={"Markets and Finance"}
+        onPress={() => {
+          router.push('/(drawer)/mAndF');
+        }}
+      />
+
+      <DrawerItem
+        icon={({ color, size }) =>
+          <AntDesign name="car" size={size} color={color} />
+        }
+        label={"Auto Motives"}
+        onPress={() => {
+          router.push('/(drawer)/autoMotives');
         }}
       />
     </DrawerContentScrollView>

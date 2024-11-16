@@ -4,8 +4,8 @@ import React from 'react'
 const home = () => {
   return (
     <View>
-      <Text>home</Text>
-      <Text>try the drawer now :)</Text>
+      <Text>Home Page</Text>
+      <Text>Check out the drawer panel for genres.</Text>
 
     </View>
   )

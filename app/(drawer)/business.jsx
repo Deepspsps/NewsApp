@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, Image, FlatList, TouchableOpacity, StyleSheet, Linking } from 'react-native';
 import axios from 'axios';
 
-export default function Context(){
+export default function business(){
     const [articles, setArticles] = useState([]); // Stores news articles
 
     useEffect(() => {

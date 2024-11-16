@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, Image, FlatList, TouchableOpacity, StyleSheet, Linking } from 'react-native';
 import axios from 'axios';
 
-export default function technology(){
+export default function mAndF(){
     const [articles, setArticles] = useState([]); // Stores news articles
 
     useEffect(() => {
         // Fetch news when the component loads
-        axios.get(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=1550b8e6c60042b5a0870ea6bed01635`)
+        axios.get(`https://newsapi.org/v2/everything?domains=wsj.com&apiKey=1550b8e6c60042b5a0870ea6bed01635`)
             .then(response => {
                 setArticles(response.data.articles);
             })
